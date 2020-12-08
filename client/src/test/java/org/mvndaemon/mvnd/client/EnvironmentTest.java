@@ -36,8 +36,6 @@ public class EnvironmentTest {
     void arguments() {
         assertEquals("foo=bar", Environment.MAVEN_DEFINE.removeCommandLineOption(list("-Dfoo=bar")));
         assertEquals("foo=bar", Environment.MAVEN_DEFINE.removeCommandLineOption(list("-D", "foo=bar")));
-        assertEquals("foo=bar", Environment.MAVEN_DEFINE.removeCommandLineOption(list("--define", "foo=bar")));
-        assertEquals("foo=bar", Environment.MAVEN_DEFINE.removeCommandLineOption(list("--define=foo=bar")));
 
         assertEquals("foo", Environment.MAVEN_DEFINE.removeCommandLineOption(list("-D=foo")));
         assertEquals("foo", Environment.MAVEN_DEFINE.removeCommandLineOption(list("-Dfoo")));
@@ -46,7 +44,6 @@ public class EnvironmentTest {
         assertEquals("foo=", Environment.MAVEN_DEFINE.removeCommandLineOption(list("-Dfoo=")));
 
         assertEquals("", Environment.MAVEN_DEFINE.removeCommandLineOption(list("-D")));
-        assertEquals("", Environment.MAVEN_DEFINE.removeCommandLineOption(list("--define")));
     }
 
     private List<String> list(String... items) {

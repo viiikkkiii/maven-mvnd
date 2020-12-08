@@ -109,7 +109,7 @@ public enum Environment {
     /** Show version */
     MAVEN_SHOW_VERSION(null, null, null, OptionType.BOOLEAN, Flags.INTERNAL, "mvn:-V", "mvn:--show-version"),
     /** Define */
-    MAVEN_DEFINE(null, null, null, OptionType.STRING, Flags.INTERNAL, "mvn:-D", "mvn:--define"),
+    MAVEN_DEFINE(null, null, null, OptionType.STRING, Flags.INTERNAL, "mvn:-D"),
     /** Whether the output should be styled using ANSI color codes; possible values: auto, always, never */
     MAVEN_COLOR("style.color", null, "auto", OptionType.STRING, Flags.OPTIONAL, "mvnd:--color"),
 
